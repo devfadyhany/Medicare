@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <!-- ///////////////////////////////// CSS /////////////////////////////////-->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- =============== Navbar =============== -->
+    <nav class="navbar bg-white fixed-top shadow-sm">
+      <div class="container">
+        <a
+          href="./index.html"
+          class="navbar-brand d-flex align-items-center gap-2"
+        >
+          <img
+            src="./imgs/Logo.png"
+            alt="website logo"
+            width="50"
+            height="50"
+          />
+          <span class="fs-2 fw-bolder my-text-secondary"
+            >Medi<span class="my-text-primary">care</span></span
+          >
+        </a>
+        <h2 class="my-text-secondary me-2">Login</h2>
+      </div>
+    </nav>
+
+    <!-- =============== Login Form =============== -->
+    <div class="container skip-navbar mt-5">
+      <div class="row justify-content-between">
+        <form class="col-md-6">
+          <div class="mb-3">
+            <label for="Email" class="form-label fw-bold">Email address</label>
+            <input
+              type="email"
+              class="form-control shadow-sm"
+              placeholder="Enter your email address"
+              id="Email"
+              aria-describedby="emailHelp"
+              autocomplete="off"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="Password" class="form-label fw-bold">Password</label>
+            <input
+              type="password"
+              class="form-control shadow-sm"
+              placeholder="Enter you password"
+              id="Password"
+              required
+            />
+          </div>
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input shadow-sm"
+              id="rememberMe"
+            />
+            <label class="form-check-label" for="rememberMe">Remember Me</label>
+          </div>
+          <div class="d-flex mb-3">
+            <button
+              onclick="Login()"
+              type="button"
+              class="btn my-btn-primary col-12 col-lg-3"
+            >
+              Login
+            </button>
+          </div>
+          <p>Don't have an account? <a href="./register.html">Register</a></p>
+        </form>
+
+        <img class="col-md-4 d-none d-md-block" src="./imgs/Login.svg" alt="" />
+      </div>
+    </div>
+
+    <!-- ///////////////////////////////// JS /////////////////////////////////-->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/global.js"></script>
+    <script src="./js/auth.js"></script>
+  </body>
+</html>

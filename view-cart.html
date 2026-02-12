@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View Cart</title>
+    <!-- ///////////////////////////////// CSS /////////////////////////////////-->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="bg"></div>
+
+    <!-- =============== Navbar =============== -->
+    <nav class="navbar bg-white fixed-top shadow-sm">
+      <div class="container">
+        <a
+          href="./index.html"
+          class="navbar-brand d-flex align-items-center gap-2"
+        >
+          <img
+            src="./imgs/Logo.png"
+            alt="website logo"
+            width="50"
+            height="50"
+          />
+          <span class="fs-2 fw-bolder my-text-secondary"
+            >Medi<span class="my-text-primary">care</span></span
+          >
+        </a>
+        <h2 class="my-text-secondary me-2">View Cart</h2>
+      </div>
+    </nav>
+
+    <!-- =============== Content =============== -->
+    <div class="container skip-navbar mt-5 pb-5">
+      <div id="cart-content" class="row justify-content-center gap-3 g-1"></div>
+
+      <h3 class="text-center mt-5">
+        Total Price: $<span id="total-price">1350</span>
+      </h3>
+
+      <hr />
+
+      <h3 class="favourite-title">Favorite Items</h3>
+
+      <div
+        id="favourite-content"
+        class="mt-5 row flex-nowrap gap-3 overflow-x-scroll p-2"
+      ></div>
+    </div>
+
+    <!-- ///////////////////////////////// JS /////////////////////////////////-->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/global.js"></script>
+    <script src="./js/cart.js"></script>
+    <script src="./js/favourite.js"></script>
+    <script src="./js/script-view-cart.js"></script>
+  </body>
+</html>

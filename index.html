@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 4</title>
+    <!-- ///////////////////////////////// CSS /////////////////////////////////-->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- =============== Navbar =============== -->
+    <nav class="navbar bg-white fixed-top shadow-sm">
+      <div class="container">
+        <a
+          href="./index.html"
+          class="navbar-brand d-flex align-items-center gap-2"
+        >
+          <img
+            src="./imgs/Logo.png"
+            alt="website logo"
+            width="50"
+            height="50"
+          />
+          <span class="fs-2 fw-bolder my-text-secondary"
+            >Medi<span class="my-text-primary">care</span></span
+          >
+        </a>
+        <div id="no-user">
+          <a href="./login.html" class="btn my-btn-primary px-3 rounded-4"
+            >Login</a
+          >
+          <a href="./register.html" class="btn my-btn-secondary px-3 rounded-4"
+            >Register</a
+          >
+        </div>
+        <div id="user" class="flex-row justify-content-between gap-3 d-none">
+          <p class="d-inline">Hello, <span id="current-user">Fady</span></p>
+          <button class="btn my-text-primary" id="cart-open">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            <span id="num-of-items">0</span>
+          </button>
+          <button
+            onclick="Logout()"
+            type="button"
+            class="btn my-btn-danger-outline"
+          >
+            Logout
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- =============== Search =============== -->
+    <div class="container" style="padding-top: 90px">
+      <div class="row g-3">
+        <div class="col-md-5 col-lg-3">
+          <select
+            id="search-filter"
+            class="rounded-2 p-2 category-select shadow-sm"
+          >
+            <option value="title">Search By Product Name</option>
+            <option value="category">Search By Product Category</option>
+          </select>
+        </div>
+
+        <div class="col-md-5 col-lg-7">
+          <input
+            id="search-box"
+            class="w-100 form-control rounded-2 p-2 border-2 shadow-sm"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+        </div>
+
+        <div class="col-md-2">
+          <button
+            class="w-100 btn my-btn-primary rounded-2 p-2 shadow-sm"
+            type="button"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- =============== Content =============== -->
+    <div class="container mt-5 pb-5">
+      <div id="products-list" class="row g-5"></div>
+    </div>
+
+    <!-- =============== Cart =============== -->
+    <div id="cart" class="cart-menu p-3">
+      <div class="d-flex justify-content-between align-items-center">
+        <h2 class="d-inline">Your Cart</h2>
+        <button class="btn btn-sm my-btn-danger h-100" id="cart-close">
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </button>
+      </div>
+      <hr />
+
+      <div id="cart-content" class="row g-3"></div>
+
+      <div class="cart-btn"></div>
+    </div>
+
+    <!-- ///////////////////////////////// JS /////////////////////////////////-->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/global.js"></script>
+    <script src="./js/search.js"></script>
+    <script src="./js/cart.js"></script>
+    <script src="./js/favourite.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
